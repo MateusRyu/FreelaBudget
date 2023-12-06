@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+
+{% block main %}
+<p>
+  Aprenda como precificar o seu trabalho como freelancer!
+</p>
+<h2>
+  Para você que é MEI ou quer se tornar MEI, calcule o valor da sua hora de trabalho:
+</h2>
+
+<hr>
+<section>
+  <form>
+    <div>
+      <label for="wagePerMonth">
+        Quanto você ganha por mês (líquido)?
+      </label>
+      <input id="wagePerMonth" name="wagePerMonth" type="number" placeholder="R$/mês"/>
+    </div>
+    <div>
+      <label for="hoursPerDay">
+        Quantas horas você quer trabalhar por dia?
+      </label>
+      <input id="hoursPerDay" name="hoursPerDay" type="number" placeholder="Horas/dia"/>
+    </div>
+    <div>
+      <label for="daysPerWeek">
+        Quantos dias você quer trabalhar por semana?
+      </label>
+      <input id="daysPerWeek" name="daysPerWeek" type="number" placeholder="Dias/semana"/>
+    </div>
+    <div>
+      <label for="weeksOfVacation">
+        Quantas semanas por ano você gostaria de tirar férias?
+      </label>
+      <input id="weeksOfVacation" name="weeksOfVacation" type="number" placeholder="Semanas/ano"/>
+    </div>
+    <div>
+      <label for="role">
+        Selecione o tio de atividade que exerce como MEI
+      </label>
+      <select id="role" name="role">
+        <option disabled selected>Selecione o serviço prestado</option>
+        <option value="web_design">Web design</option>
+        <option value="front_end">Desenvolvimento front-end</option>
+        <option value="back_end">Desenvolvimento back-end</option>
+        <option value="full_stack">Desenvolvimento full-stack</option>
+      </select>
+    </div>
+    <div>
+      <label for="costsPerMonth">
+        Qual os seus custos mensais relacionados ao trabalho?
+      </label>
+      <small>Custos de licenças...</small>
+      <input type="number" name="costsPerMonth" placeholder="R$/mês">
+    </div>
+  </form>
+  <aside>
+    <p>
+      O valor mínimo para sua hora de trabalho é:
+      <span>R$24,80/hora</span>
+    </p>
+    <p>
+      O valor médio bruto que você precisa fatura é:
+      <span>R$3.571,00/mês</span>
+    </p>
+  </aside>
+</section>
+
+<hr>
+
+<h2>
+  Calcule o valor a ser cobrado para um projeto:
+</h2>
+{% endblock %}
